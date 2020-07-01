@@ -1,185 +1,145 @@
 ---
-description:  
+description: null
 ---
+
 # Pool
 
->  **Package : spaceone.api.inventory.v1**
+> **Package : spaceone.api.inventory.v1**
 
 ## Pool
 
 {% hint style="info" %}
 **Pool Methods:**
+{% endhint %}
 
-{%  endhint %}
-
-
-| NO |  Method | Request Type | Response Type | Description |
+| NO | Method | Request Type | Response Type | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | [create](Pool.md#create)| [CreatePoolRequest](Pool.md#createpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 2 | [update](Pool.md#update)| [UpdatePoolRequest](Pool.md#updatepoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 3 | [delete](Pool.md#delete)| [PoolRequest](Pool.md#poolrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 4 | [get](Pool.md#get)| [GetPoolRequest](Pool.md#getpoolrequest)| [PoolInfo](Pool.md#poolinfo) |  |
-| 5 | [add_member](Pool.md#add_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 6 | [modify_member](Pool.md#modify_member)| [PoolMemberRequest](Pool.md#poolmemberrequest)| [PoolMemberInfo](Pool.md#poolmemberinfo) |  |
-| 7 | [remove_member](Pool.md#remove_member)| [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest)|[google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto)|  |
-| 8 | [list_members](Pool.md#list_members)| [PoolMemberQuery](Pool.md#poolmemberquery)| [PoolMembersInfo](Pool.md#poolmembersinfo) |  |
-| 9 | [list](Pool.md#list)| [PoolQuery](Pool.md#poolquery)| [PoolsInfo](Pool.md#poolsinfo) |  |
-| 10 | [stat](Pool.md#stat)| [PoolStatQuery](Pool.md#poolstatquery)|[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto)|  |
+| 1 | [create](pool.md#create) | [CreatePoolRequest](pool.md#createpoolrequest) | [PoolInfo](pool.md#poolinfo) |  |
+| 2 | [update](pool.md#update) | [UpdatePoolRequest](pool.md#updatepoolrequest) | [PoolInfo](pool.md#poolinfo) |  |
+| 3 | [delete](pool.md#delete) | [PoolRequest](pool.md#poolrequest) | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |  |
+| 4 | [get](pool.md#get) | [GetPoolRequest](pool.md#getpoolrequest) | [PoolInfo](pool.md#poolinfo) |  |
+| 5 | [add\_member](pool.md#add_member) | [PoolMemberRequest](pool.md#poolmemberrequest) | [PoolMemberInfo](pool.md#poolmemberinfo) |  |
+| 6 | [modify\_member](pool.md#modify_member) | [PoolMemberRequest](pool.md#poolmemberrequest) | [PoolMemberInfo](pool.md#poolmemberinfo) |  |
+| 7 | [remove\_member](pool.md#remove_member) | [RemovePoolMemberRequest](pool.md#removepoolmemberrequest) | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |  |
+| 8 | [list\_members](pool.md#list_members) | [PoolMemberQuery](pool.md#poolmemberquery) | [PoolMembersInfo](pool.md#poolmembersinfo) |  |
+| 9 | [list](pool.md#list) | [PoolQuery](pool.md#poolquery) | [PoolsInfo](pool.md#poolsinfo) |  |
+| 10 | [stat](pool.md#stat) | [PoolStatQuery](pool.md#poolstatquery) | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |
 
 ### create
+
 > **POST** /inventory/v1/pools
->
-
-
 
 | Type | Message |
 | :--- | :--- |
-| Request | [CreatePoolRequest](Pool.md#createpoolrequest) |
-| Response |  [PoolInfo](Pool.md#poolinfo)  |
-
-
+| Request | [CreatePoolRequest](pool.md#createpoolrequest) |
+| Response | [PoolInfo](pool.md#poolinfo) |
 
 ### update
-> **PUT** /inventory/v1/pool/{pool_id}
->
 
-
+> **PUT** /inventory/v1/pool/{pool\_id}
 
 | Type | Message |
 | :--- | :--- |
-| Request | [UpdatePoolRequest](Pool.md#updatepoolrequest) |
-| Response |  [PoolInfo](Pool.md#poolinfo)  |
-
-
+| Request | [UpdatePoolRequest](pool.md#updatepoolrequest) |
+| Response | [PoolInfo](pool.md#poolinfo) |
 
 ### delete
-> **DELETE** /inventory/v1/pool/{pool_id}
->
 
-
+> **DELETE** /inventory/v1/pool/{pool\_id}
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolRequest](Pool.md#poolrequest) |
+| Request | [PoolRequest](pool.md#poolrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
-
-
 
 ### get
-> **GET** /inventory/v1/pool/{pool_id}
->
 
-
+> **GET** /inventory/v1/pool/{pool\_id}
 
 | Type | Message |
 | :--- | :--- |
-| Request | [GetPoolRequest](Pool.md#getpoolrequest) |
-| Response |  [PoolInfo](Pool.md#poolinfo)  |
+| Request | [GetPoolRequest](pool.md#getpoolrequest) |
+| Response | [PoolInfo](pool.md#poolinfo) |
 
+### add\_member
 
-
-### add_member
-> **GET** /inventory/v1/pool/{pool_id}/members
->
-
-
+> **GET** /inventory/v1/pool/{pool\_id}/members
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolMemberRequest](Pool.md#poolmemberrequest) |
-| Response |  [PoolMemberInfo](Pool.md#poolmemberinfo)  |
+| Request | [PoolMemberRequest](pool.md#poolmemberrequest) |
+| Response | [PoolMemberInfo](pool.md#poolmemberinfo) |
 
+### modify\_member
 
-
-### modify_member
-> **GET** /inventory/v1/pool/{pool_id}/member/{user_id}
->
-
-
+> **GET** /inventory/v1/pool/{pool\_id}/member/{user\_id}
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolMemberRequest](Pool.md#poolmemberrequest) |
-| Response |  [PoolMemberInfo](Pool.md#poolmemberinfo)  |
+| Request | [PoolMemberRequest](pool.md#poolmemberrequest) |
+| Response | [PoolMemberInfo](pool.md#poolmemberinfo) |
 
+### remove\_member
 
-
-### remove_member
-> **GET** /inventory/v1/pool/{pool_id}/member/{user_id}
->
-
-
+> **GET** /inventory/v1/pool/{pool\_id}/member/{user\_id}
 
 | Type | Message |
 | :--- | :--- |
-| Request | [RemovePoolMemberRequest](Pool.md#removepoolmemberrequest) |
+| Request | [RemovePoolMemberRequest](pool.md#removepoolmemberrequest) |
 | Response | [google.protobuf.Empty](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/empty.proto) |
 
+### list\_members
 
-
-### list_members
-> **GET** /inventory/v1/pool/{pool_id}/members
+> **GET** /inventory/v1/pool/{pool\_id}/members
 >
-> **POST** /inventory/v1/pool/{pool_id}/members/search
-
-
-
+> **POST** /inventory/v1/pool/{pool\_id}/members/search
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolMemberQuery](Pool.md#poolmemberquery) |
-| Response |  [PoolMembersInfo](Pool.md#poolmembersinfo)  |
-
-
+| Request | [PoolMemberQuery](pool.md#poolmemberquery) |
+| Response | [PoolMembersInfo](pool.md#poolmembersinfo) |
 
 ### list
+
 > **GET** /inventory/v1/pools
 >
 > **POST** /inventory/v1/pools/search
 
-
-
-
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolQuery](Pool.md#poolquery) |
-| Response |  [PoolsInfo](Pool.md#poolsinfo)  |
-
-
+| Request | [PoolQuery](pool.md#poolquery) |
+| Response | [PoolsInfo](pool.md#poolsinfo) |
 
 ### stat
+
 > **POST** /inventory/v1/pools/stat
->
-
-
 
 | Type | Message |
 | :--- | :--- |
-| Request | [PoolStatQuery](Pool.md#poolstatquery) |
+| Request | [PoolStatQuery](pool.md#poolstatquery) |
 | Response | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |
-
-
-
-
 
 ## Message
 
 ### CreatePoolRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | name |string |✅ ||
-| 2 | zone_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | name | string | ✅ |  |
+| 2 | zone\_id | string | ✅ |  |
+| 3 | domain\_id | string | ✅ |  |
+| 4 | tags | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ❌ |  |
 
 ### GetPoolRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | only |string |❌ ||
+| 1 | pool\_id | string | ✅ |  |
+| 2 | domain\_id | string | ✅ |  |
+| 3 | only | string | ❌ |  |
 
 ### PoolInfo
+
 <table>
   <thead>
     <tr>
@@ -194,167 +154,160 @@ description:
     <tr>
       <td style="text-align:left">1</td>
       <td style="text-align:left">pool_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">2</td>
       <td style="text-align:left">name</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">3</td>
       <td style="text-align:left">state</td>
       <td style="text-align:left">
-<p>PoolInfo.State</p>
+        <p>PoolInfo.State</p>
         <ul>
-          	<li>NONE</li>
-          	<li>ACTIVE</li>
-          	<li>DELETED</li>
+          <li>NONE</li>
+          <li>ACTIVE</li>
+          <li>DELETED</li>
         </ul>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">4</td>
       <td style="text-align:left">tags</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto">google.protobuf.Struct</a>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">5</td>
       <td style="text-align:left">domain_id</td>
-      <td style="text-align:left">
-
-string
-
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">6</td>
       <td style="text-align:left">region_info</td>
-      <td style="text-align:left">
-<a href="Pool.md#regioninfo">RegionInfo</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left"> <a href="pool.md#regioninfo">RegionInfo</a>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">7</td>
       <td style="text-align:left">zone_info</td>
-      <td style="text-align:left">
-<a href="Pool.md#zoneinfo">ZoneInfo</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left"> <a href="pool.md#zoneinfo">ZoneInfo</a>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">8</td>
       <td style="text-align:left">created_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
     <tr>
       <td style="text-align:left">9</td>
       <td style="text-align:left">deleted_at</td>
-      <td style="text-align:left">
-<a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
-</td>
-        <td style="text-align:left"></td>
-<td style="text-align:left"></td>
+      <td style="text-align:left"> <a href="https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/timestamp.proto">google.protobuf.Timestamp</a>
+      </td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
     </tr>
   </tbody>
 </table>
 
-
 ### PoolMemberInfo
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_info |[PoolInfo](Pool.md#poolinfo) | ||
-| 2 | user_info |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ||
-| 3 | labels |string | ||
+| 1 | pool\_info | [PoolInfo](pool.md#poolinfo) |  |  |
+| 2 | user\_info | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |  |  |
+| 3 | labels | string |  |  |
 
 ### PoolMemberQuery
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | pool_id |string |❌ ||
-| 3 | user_id |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | query | [spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | ❌ |  |
+| 2 | pool\_id | string | ❌ |  |
+| 3 | user\_id | string | ❌ |  |
+| 4 | domain\_id | string | ✅ |  |
 
 ### PoolMemberRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | labels |string |❌ ||
-| 4 | domain_id |string |✅ ||
+| 1 | pool\_id | string | ✅ |  |
+| 2 | user\_id | string | ✅ |  |
+| 3 | labels | string | ❌ |  |
+| 4 | domain\_id | string | ✅ |  |
 
 ### PoolMembersInfo
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[PoolMemberInfo](Pool.md#poolmemberinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results | [PoolMemberInfo](pool.md#poolmemberinfo) |  |  |
+| 2 | total\_count | [int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |  |  |
 
 ### PoolQuery
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) |❌ ||
-| 2 | pool_id |string |❌ ||
-| 3 | region_id |string |❌ ||
-| 4 | zone_id |string |❌ ||
-| 5 | domain_id |string |✅ ||
-| 6 | name |string |❌ ||
+| 1 | query | [spaceone.api.core.v1.Query](https://spaceone-dev.gitbook.io/api-reference/common-v1/search-query) | ❌ |  |
+| 2 | pool\_id | string | ❌ |  |
+| 3 | region\_id | string | ❌ |  |
+| 4 | zone\_id | string | ❌ |  |
+| 5 | domain\_id | string | ✅ |  |
+| 6 | name | string | ❌ |  |
 
 ### PoolRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | pool\_id | string | ✅ |  |
+| 2 | domain\_id | string | ✅ |  |
 
 ### PoolStatQuery
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | query |[spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) |✅ ||
-| 2 | domain_id |string |✅ ||
+| 1 | query | [spaceone.api.core.v1.StatisticsQuery](https://spaceone-dev.gitbook.io/api-reference/common-v1/statistics-query) | ✅ |  |
+| 2 | domain\_id | string | ✅ |  |
 
 ### PoolsInfo
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | results |[PoolInfo](Pool.md#poolinfo) | ||
-| 2 | total_count |[int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) | ||
+| 1 | results | [PoolInfo](pool.md#poolinfo) |  |  |
+| 2 | total\_count | [int32](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/type.proto) |  |  |
 
 ### RemovePoolMemberRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | user_id |string |✅ ||
-| 3 | domain_id |string |✅ ||
+| 1 | pool\_id | string | ✅ |  |
+| 2 | user\_id | string | ✅ |  |
+| 3 | domain\_id | string | ✅ |  |
 
 ### UpdatePoolRequest
+
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | pool_id |string |✅ ||
-| 2 | domain_id |string |✅ ||
-| 3 | name |string |❌ ||
-| 4 | tags |[google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) |❌ ||
+| 1 | pool\_id | string | ✅ |  |
+| 2 | domain\_id | string | ✅ |  |
+| 3 | name | string | ❌ |  |
+| 4 | tags | [google.protobuf.Struct](https://github.com/protocolbuffers/protobuf/blob/master/src/google/protobuf/struct.proto) | ❌ |  |
+
