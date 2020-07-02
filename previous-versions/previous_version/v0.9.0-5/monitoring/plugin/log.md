@@ -49,7 +49,7 @@ description: null
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource\_type | string |  | required |
-| 2 | actions | [spaceone.api.core.v1.PluginAction](../../core/v1/plugin.md##pluginaction) |  | optional |
+| 2 | actions | [spaceone.api.core.v1.PluginAction]() |  | optional |
 | 3 | result | [LogsInfo](log.md#logsinfo) |  | required |
 
 ### Sort

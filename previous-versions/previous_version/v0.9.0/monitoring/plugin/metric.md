@@ -82,7 +82,7 @@ description: null
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource\_type | string |  | required |
-| 2 | actions | [spaceone.api.core.v1.PluginAction](../../../v0.9.0-5/core/v1/plugin.md##pluginaction) |  | optional |
+| 2 | actions | [spaceone.api.core.v1.PluginAction]() |  | optional |
 | 3 | result | [MetricDataInfo](../../../v0.9.0-5/monitoring/plugin/metric.md#metricdatainfo) |  | required |
 
 ### PluginMetricsResponse
@@ -90,6 +90,6 @@ description: null
 | No | Field | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | resource\_type | string |  | required |
-| 2 | actions | [spaceone.api.core.v1.PluginAction](../../../v0.9.0-5/core/v1/plugin.md##pluginaction) |  | optional |
+| 2 | actions | [spaceone.api.core.v1.PluginAction]() |  | optional |
 | 3 | result | [MetricsInfo](../../../v0.9.0-5/monitoring/plugin/metric.md#metricsinfo) |  | required |
 
