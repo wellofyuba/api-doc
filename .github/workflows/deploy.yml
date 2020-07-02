@@ -58,7 +58,7 @@ jobs:
     - name: File exists
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
-        echo "::set-env name=ARTIFACT_VERSION::$(cat $ATIFACT_VERSION/VERSION)"
+        echo "::set-env name=ARTIFACT_VERSION::$(cat $ARTIFACT_VERSION/VERSION)"
 
     - name: Check version updates
       if: env.ARTIFACT_VERSION > env.API_DOC_VERSION
