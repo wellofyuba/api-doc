@@ -18,7 +18,7 @@ jobs:
         # LOCATION points the parent directory
         LOCATION_SETUP_PY: dist/python # optional. for pypi upload
         LOCATION_VERSION: . # the location for VERSION file (ex- . means the location of VERSION is ./VERSION)
-        ATIFACT_VERSION: ./artifact/json
+        ARTIFACT_VERSION: ./artifact/json
         IS_SUDO: true
       run: |
         echo "::set-env name=SERVICE::$SERVICE"
@@ -56,10 +56,10 @@ jobs:
     - name: File exists
       if: steps.check_files.outputs.files_exists == 'true'
       run: |
-        echo "::set-env name=ARTFACT_VERSION::$(cat $ATIFACT_VERSION/VERSION)"
+        echo "::set-env name=ARTIFACT_VERSION::$(cat $ATIFACT_VERSION/VERSION)"
 
     - name: Check version updates
-      if: env.ARTFACT_VERSION > env.API_DOC_VERSION
+      if: env.ARTIFACT_VERSION > env.API_DOC_VERSION
       uses: peterjgrainger/action-create-branch@v1.0.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
