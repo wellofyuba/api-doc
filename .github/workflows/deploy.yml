@@ -26,6 +26,8 @@ jobs:
         echo "::set-env name=LOCATION_SETUP_PY::$LOCATION_SETUP_PY"
         echo "::set-env name=LOCATION_VERSION::$LOCATION_VERSION"
         echo "::set-env name=IS_SUDO::$IS_SUDO"
+        echo "::set-env name=ARTIFACT_VERSION::$ARTIFACT_VERSION"
+
     - name: Clone master branch
       uses: actions/checkout@v2
       with:
